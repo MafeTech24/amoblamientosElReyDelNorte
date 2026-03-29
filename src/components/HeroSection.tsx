@@ -27,22 +27,14 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
-        <motion.span
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-sans text-sm md:text-base tracking-[0.3em] text-primary-foreground/80 uppercase mb-4"
-        >
-          Muebles artesanales desde 1985
-        </motion.span>
-
+        
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground max-w-4xl leading-tight"
         >
-          El Rey del Norte
+          Amoblamientos El Rey del Norte
         </motion.h1>
 
         <motion.h2
@@ -60,8 +52,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="font-sans text-lg md:text-xl text-primary-foreground/80 max-w-2xl mt-6"
         >
-          Cada pieza cuenta una historia. Muebles únicos creados con técnicas
-          tradicionales y maderas nobles seleccionadas.
+          Cada pieza cuenta una historia. Muebles únicos creados con madera seleccionadas.
         </motion.p>
 
         <motion.button

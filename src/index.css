@@ -183,3 +183,27 @@
     display: none;
   }
 }
+
+/* =====================================================
+   Product card image — uniform fixed height per breakpoint
+   (outside @layer so it cannot be overridden by Tailwind layers)
+   ===================================================== */
+.product-card-image {
+  position: relative !important;
+  width: 100% !important;
+  height: 340px !important;
+  overflow: hidden !important;
+  border-radius: 2px;
+}
+
+@media (min-width: 640px) {
+  .product-card-image {
+    height: 380px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-card-image {
+    height: 400px !important;
+  }
+}

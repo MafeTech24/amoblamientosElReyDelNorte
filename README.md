@@ -1,73 +1,91 @@
-# Welcome to your Lovable project
+# Amoblamientos El Rey del Norte
 
-## Project info
+Sitio web de **Amoblamientos El Rey del Norte**, mueblería artesanal ubicada en **Juárez Celman, Córdoba, Argentina**.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+> *"Cada pieza cuenta una historia. Muebles únicos creados con maderas seleccionadas."*
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🏠 Sobre el negocio
 
-**Use Lovable**
+Amoblamientos El Rey del Norte es una mueblería con fabricación propia dedicada a la producción de muebles artesanales de alta calidad. Cada producto es elaborado con materiales seleccionados —maderas macizas, MDF laqueado, melamina premium, vidrio y herrajes— garantizando durabilidad y diseño en cada pieza.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+El sitio permite a los clientes explorar el catálogo completo, ver el detalle de cada mueble y contactar directamente al negocio por WhatsApp o teléfono para consultar por un proyecto a medida.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🛋️ Catálogo de productos
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+El catálogo está organizado por categorías y puede filtrarse desde el sitio:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 🍳 Cocinas
+| Producto | Descripción | Materiales |
+|---|---|---|
+| **Cocina Integral Gris** | Diseño minimalista en tono gris topo, muebles superiores e inferiores con mesada resistente | Melamina premium, mesada de cuarzo |
+| **Cocina Madera Natural** | Acabado cálido con cajones, alacenas y bodeguero integrado | Madera maciza, mesada de granito |
+| **Cocina Estilo Campo** | Encanto rústico en color celeste con herrajes vintage | Madera laqueada, herrajes de hierro forjado |
 
-Follow these steps:
+### 🛁 Baño
+| Producto | Descripción | Materiales |
+|---|---|---|
+| **Vanitory Moderno** | Diseño contemporáneo en blanco brillante con cajones amplios | MDF laqueado, herrajes de acero inoxidable |
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 🗄️ Almacenaje
+| Producto | Descripción | Materiales |
+|---|---|---|
+| **Aparador Bicolor** | Combinación de madera natural y blanco, con vidrio y cajones inferiores | Madera maciza, vidrio templado, herrajes de bronce |
+| **Vitrina Clásica** | Puertas de vidrio superiores y almacenamiento cerrado inferior | Madera de cedro, vidrio biselado |
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 🛏️ Dormitorio
+| Producto | Descripción | Materiales |
+|---|---|---|
+| **Cómoda Rústica** | Seis cajones en madera maciza con detalles artesanales | Pino macizo, herrajes de bronce antiguo |
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 📺 Living
+| Producto | Descripción | Materiales |
+|---|---|---|
+| **Panel para TV** | Centro de entretenimiento con módulo flotante y estantería lateral | MDF laqueado, estructura de metal |
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### 🌿 Exterior
+| Producto | Descripción | Materiales |
+|---|---|---|
+| **Deck de Madera** | Ideal para piscinas y jardines, con tratamiento UV | Madera tratada para exterior |
 
-**Edit a file directly in GitHub**
+> Los productos de cocinas, deck y otros pueden fabricarse **a medida** según el espacio y las necesidades del cliente.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 📍 Ubicación y contacto
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+| | |
+|---|---|
+| 📍 **Dirección** | José Hernández 234, X5145 Juárez Celman, Córdoba |
+| 📞 **Teléfono** | 3512 34-6427 |
+| 💬 **WhatsApp** | Disponible en el sitio |
+| 🕐 **Horario de atención** | Lunes a Viernes: 10:00 – 19:00 |
+| 📘 **Facebook** | [Amoblamientos El Rey del Norte](https://www.facebook.com/profile.php?id=100057781384704) |
+| 📸 **Instagram** | Disponible en el sitio |
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🌐 Sobre el sitio web
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+El sitio es una **landing page** de una sola página con navegación suave entre secciones:
 
-## How can I deploy this project?
+1. **Inicio** — Portada con video de fondo y presentación del negocio.
+2. **Colección** — Catálogo filtrable por categoría (Cocinas, Baño, Dormitorio, Living, Almacenaje, Exterior).
+3. **Detalle de producto** — Página individual para cada mueble con imagen, materiales y dimensiones.
+4. **Contacto** — Datos de contacto, WhatsApp directo y mapa integrado de Google Maps.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Funcionalidades para el visitante
+- Filtrar productos por categoría con un clic.
+- Ver el detalle completo de cada mueble.
+- Contactar al negocio directamente desde el botón flotante de WhatsApp.
+- Acceder a la ubicación desde Google Maps embebido.
+- Explorar el catálogo desde cualquier dispositivo (móvil, tablet o escritorio).
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## 📄 Licencia
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Proyecto privado. Todos los derechos reservados © 2026 Amoblamientos El Rey del Norte.

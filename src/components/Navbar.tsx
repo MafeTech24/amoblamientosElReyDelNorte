@@ -7,7 +7,6 @@ import logo from "@/assets/logo.png";
 const navLinks = [
   { name: "Inicio", href: "#inicio" },
   { name: "Colección", href: "#coleccion" },
-  { name: "Nuestra Historia", href: "#nosotros" },
   { name: "Contacto", href: "#contacto" },
 ];
 
@@ -60,12 +59,12 @@ export function Navbar() {
               e.preventDefault();
               scrollToSection("#inicio");
             }}
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 min-w-0"
             whileHover={{ scale: 1.02 }}
           >
-            <img src={logo} alt="El Rey del Norte" className="h-10 w-auto" />
-            <span className={`font-serif text-xl font-bold ${isScrolled || location.pathname !== "/" ? "text-primary" : "text-primary-foreground"}`}>
-              El Rey del Norte
+            <img src={logo} alt="Amoblamientos El Rey del Norte" className="h-10 w-auto flex-shrink-0" />
+            <span className={`font-serif text-base md:text-xl font-bold truncate ${isScrolled || location.pathname !== "/" ? "text-primary" : "text-primary-foreground"}`}>
+              <span className="hidden sm:inline">Amoblamientos </span>El Rey del Norte
             </span>
           </motion.a>
 

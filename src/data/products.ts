@@ -40,7 +40,7 @@ export const products: Product[] = [
   {
     id: "cocina-integral-gris",
     image: cocinaGrisImg,
-    title: "Cocina Integral Gris",
+    title: "Mueble deCocina Integral Gris",
     category: "Cocinas",
     description: "Cocina integral con diseño minimalista en tono gris topo. Muebles superiores e inferiores con amplio espacio de almacenamiento y mesada resistente.",
     materials: ["Melamina premium", "Mesada de cuarzo"],
@@ -58,7 +58,7 @@ export const products: Product[] = [
   {
     id: "cocina-madera-natural",
     image: cocinaMaderaImg,
-    title: "Cocina Madera Natural",
+    title: "Mueble de Cocina Madera Natural",
     category: "Cocinas",
     description: "Cocina completa en madera natural con acabado cálido y elegante. Diseño funcional con múltiples cajones, alacenas y bodeguero integrado.",
     materials: ["Madera maciza", "Mesada de granito"],
@@ -67,7 +67,7 @@ export const products: Product[] = [
   {
     id: "cocina-celeste",
     image: cocinaCelesteImg,
-    title: "Cocina Estilo Campo",
+    title: "Mueble de Cocina Estilo Campo",
     category: "Cocinas",
     description: "Cocina con encanto rústico en color celeste. Puertas con molduras clásicas y herrajes de estilo vintage para un ambiente acogedor.",
     materials: ["Madera laqueada", "Herrajes de hierro forjado"],

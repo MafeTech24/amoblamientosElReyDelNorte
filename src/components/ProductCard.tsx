@@ -10,12 +10,10 @@ interface ProductCardProps {
   delay?: number;
 }
 
+const CARD_HEIGHT = 340; // px — altura uniforme para todas las cards
+
 export function ProductCard({ id, image, title, category, delay = 0 }: ProductCardProps) {
   const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate(`/producto/${id}`);
-  };
 
   return (
     <motion.div
@@ -24,31 +22,51 @@ export function ProductCard({ id, image, title, category, delay = 0 }: ProductCa
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, delay }}
       className="group cursor-pointer"
-      onClick={handleClick}
+      onClick={() => navigate(`/producto/${id}`)}
     >
-      <div className="relative overflow-hidden rounded-sm">
-        <div className="aspect-[4/5] overflow-hidden">
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-          />
-        </div>
-        
-        {/* Overlay on hover */}
-        <div className="absolute inset-0 bg-espresso/0 group-hover:bg-espresso/40 transition-all duration-500 flex items-center justify-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileHover={{ opacity: 1, scale: 1 }}
-            className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          >
-            <div className="w-14 h-14 rounded-full bg-accent flex items-center justify-center">
-              <ArrowRight className="text-accent-foreground" size={22} />
-            </div>
-          </motion.div>
+      {/* Contenedor de imagen con altura fija */}
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          height: `${CARD_HEIGHT}px`,
+          overflow: "hidden",
+          borderRadius: "2px",
+        }}
+      >
+        <img
+          src={image}
+          alt={title}
+          style={{
+            display: "block",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+            transition: "transform 0.7s ease",
+          }}
+          className="group-hover:scale-110"
+        />
+
+        {/* Hover overlay */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            transition: "background-color 0.5s",
+          }}
+          className="bg-espresso/0 group-hover:bg-espresso/40"
+        >
+          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-14 h-14 rounded-full bg-accent flex items-center justify-center">
+            <ArrowRight className="text-accent-foreground" size={22} />
+          </div>
         </div>
       </div>
 
+      {/* Texto debajo de la imagen */}
       <div className="mt-4 space-y-1">
         <span className="font-sans text-xs tracking-widest text-muted-foreground uppercase">
           {category}
@@ -60,3 +78,4 @@ export function ProductCard({ id, image, title, category, delay = 0 }: ProductCa
     </motion.div>
   );
 }
+

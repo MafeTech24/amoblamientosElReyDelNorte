@@ -1,10 +1,9 @@
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { CollectionSection } from "@/components/CollectionSection";
-import { AboutSection } from "@/components/AboutSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
-import { ChatBot } from "@/components/ChatBot";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -12,10 +11,9 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <CollectionSection />
-      <AboutSection />
       <ContactSection />
       <Footer />
-      <ChatBot />
+      <WhatsAppButton />
     </div>
   );
 };
