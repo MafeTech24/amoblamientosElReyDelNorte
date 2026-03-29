@@ -1,11 +1,8 @@
 import { motion } from "framer-motion";
-import { MessageCircle, Facebook, Instagram, ArrowUp } from "lucide-react";
+import { MessageCircle, Facebook, Instagram } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 export function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   return (
     <footer className="py-12 bg-espresso/80 backdrop-blur-sm text-primary-foreground/80">
@@ -25,15 +22,6 @@ export function Footer() {
 
           <div className="flex items-center gap-6">
             <motion.a
-              href="https://wa.me/5493512346427"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors"
-              whileHover={{ scale: 1.1 }}
-            >
-              <MessageCircle size={18} />
-            </motion.a>
-            <motion.a
               href="https://www.facebook.com/profile.php?id=100057781384704"
               target="_blank"
               rel="noopener noreferrer"
@@ -51,13 +39,16 @@ export function Footer() {
             >
               <Instagram size={18} />
             </motion.a>
-            <motion.button
-              onClick={scrollToTop}
-              className="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-accent-foreground"
-              whileHover={{ scale: 1.1, y: -2 }}
+            <motion.a
+              href="https://wa.me/5493512346427"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors"
+              whileHover={{ scale: 1.1 }}
             >
-              <ArrowUp size={18} />
-            </motion.button>
+              <MessageCircle size={18} />
+            </motion.a>
+
           </div>
         </div>
       </div>

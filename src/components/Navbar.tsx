@@ -63,8 +63,8 @@ export function Navbar() {
             whileHover={{ scale: 1.02 }}
           >
             <img src={logo} alt="Amoblamientos El Rey del Norte" className="h-10 w-auto flex-shrink-0" />
-            <span className={`font-serif text-base md:text-xl font-bold truncate ${isScrolled || location.pathname !== "/" ? "text-primary" : "text-primary-foreground"}`}>
-              <span className="hidden sm:inline">Amoblamientos </span>El Rey del Norte
+            <span className={`font-serif text-sm md:text-xl font-bold leading-tight ${isScrolled || location.pathname !== "/" ? "text-primary" : "text-primary-foreground"}`}>
+              Amoblamientos El Rey del Norte
             </span>
           </motion.a>
 

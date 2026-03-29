@@ -40,7 +40,7 @@ export const products: Product[] = [
   {
     id: "cocina-integral-gris",
     image: cocinaGrisImg,
-    title: "Mueble deCocina Integral Gris",
+    title: "Mueble de Cocina Integral Gris",
     category: "Cocinas",
     description: "Cocina integral con diseño minimalista en tono gris topo. Muebles superiores e inferiores con amplio espacio de almacenamiento y mesada resistente.",
     materials: ["Melamina premium", "Mesada de cuarzo"],
