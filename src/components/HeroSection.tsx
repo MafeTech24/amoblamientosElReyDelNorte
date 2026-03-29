@@ -26,13 +26,13 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center pt-20 md:pt-0">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center pt-16 md:pt-0">
         
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground max-w-4xl leading-tight"
+          className="font-serif text-3xl md:text-6xl lg:text-7xl font-bold text-primary-foreground max-w-4xl leading-tight"
         >
           Amoblamientos El Rey del Norte
         </motion.h1>
@@ -41,7 +41,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="font-serif text-2xl md:text-3xl lg:text-4xl text-gradient-gold mt-2"
+          className="font-serif text-xl md:text-3xl lg:text-4xl text-gradient-gold mt-1 md:mt-2"
         >
           Mueblería
         </motion.h2>
@@ -50,7 +50,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="font-sans text-lg md:text-xl text-primary-foreground/80 max-w-2xl mt-6"
+          className="font-sans text-base md:text-xl text-primary-foreground/80 max-w-2xl mt-4 md:mt-6"
         >
           Cada pieza cuenta una historia. Muebles únicos creados con madera seleccionadas.
         </motion.p>
@@ -60,7 +60,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           onClick={scrollToCollection}
-          className="mt-10 px-8 py-4 bg-accent text-accent-foreground font-sans font-medium tracking-wide rounded-sm hover:bg-accent/90 transition-all duration-300 hover:shadow-lg"
+          className="mt-6 md:mt-10 px-8 py-3 md:py-4 bg-accent text-accent-foreground font-sans font-medium tracking-wide rounded-sm hover:bg-accent/90 transition-all duration-300 hover:shadow-lg"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.98 }}
         >
