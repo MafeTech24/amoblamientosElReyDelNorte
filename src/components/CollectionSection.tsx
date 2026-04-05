@@ -145,7 +145,7 @@ export function CollectionSection() {
               >
                 <ProductCard
                   id={product.id}
-                  image={product.image}
+                  image={product.images[0]}
                   title={product.title}
                   category={product.category}
                 />

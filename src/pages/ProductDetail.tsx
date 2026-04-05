@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ArrowLeft, Check, Phone, MessageCircle } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, Check, Phone, MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { getProductById } from "@/data/products";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -9,6 +10,7 @@ import { Button } from "@/components/ui/button";
 export default function ProductDetail() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const [currentImage, setCurrentImage] = useState(0);
 
   const product = getProductById(id || "");
 
@@ -25,6 +27,14 @@ export default function ProductDetail() {
       </div>
     );
   }
+
+  const nextImage = () => {
+    setCurrentImage((prev) => (prev + 1) % product.images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImage((prev) => (prev - 1 + product.images.length) % product.images.length);
+  };
 
   return (
     <div className="min-h-screen">
@@ -45,20 +55,74 @@ export default function ProductDetail() {
           </motion.button>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Product Image */}
+            {/* Product Image Section */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className="relative overflow-hidden rounded-sm bg-card"
+              className="w-full"
             >
-              <div className="aspect-[4/5] overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              {product.id === "cama-moderna-duo" ? (
+                /* Carousel for Bed */
+                <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-card group">
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={currentImage}
+                      src={product.images[currentImage]}
+                      alt={`${product.title} - imagen ${currentImage + 1}`}
+                      initial={{ opacity: 0, x: 50 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -50 }}
+                      transition={{ duration: 0.4 }}
+                      className="w-full h-full object-cover"
+                    />
+                  </AnimatePresence>
+
+                  {/* Navigation Arrows */}
+                  {product.images.length > 1 && (
+                    <>
+                      <button
+                        onClick={prevImage}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/50 hover:bg-background/80 backdrop-blur-sm flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
+                      >
+                        <ChevronLeft size={24} />
+                      </button>
+                      <button
+                        onClick={nextImage}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/50 hover:bg-background/80 backdrop-blur-sm flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
+                      >
+                        <ChevronRight size={24} />
+                      </button>
+
+                      {/* Dots/Indicators */}
+                      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+                        {product.images.map((_, idx) => (
+                          <button
+                            key={idx}
+                            onClick={() => setCurrentImage(idx)}
+                            className={`w-2 h-2 rounded-full transition-all ${
+                              idx === currentImage ? "bg-accent w-6" : "bg-accent/40"
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+              ) : (
+                /* Vertical List for other products */
+                <div className="flex flex-col gap-4">
+                  {product.images.map((img, index) => (
+                    <div key={index} className="relative overflow-hidden rounded-sm bg-card aspect-[4/5]">
+                      <img
+                        src={img}
+                        alt={`${product.title} - imagen ${index + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </motion.div>
 
             {/* Product Info */}
