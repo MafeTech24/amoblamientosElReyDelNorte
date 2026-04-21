@@ -64,7 +64,7 @@ El catálogo está organizado por categorías y puede filtrarse desde el sitio:
 | 💬 **WhatsApp** | Disponible en el sitio |
 | 🕐 **Horario de atención** | Lunes a Viernes: 10:00 – 19:00 |
 | 📘 **Facebook** | [Amoblamientos El Rey del Norte](https://www.facebook.com/profile.php?id=100057781384704) |
-| 📸 **Instagram** | Disponible en el sitio |
+| 📸 **Instagram** |[ Disponible en el sitio ](https://www.instagram.com/amoblamientoselreydelnorte/)|
 
 ---
 
